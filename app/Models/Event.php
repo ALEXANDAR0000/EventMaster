@@ -19,4 +19,11 @@ public function category()
     return $this->belongsTo(Category::class);
 }
 
+protected $fillable = [
+    'title',
+    'description',
+    'date',
+    'location',
+    'category_id',
+];
 }

@@ -6,6 +6,8 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ParticipantController;
 
+use App\Http\Controllers\AuthController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -34,3 +36,4 @@ Route::post('/participants', [ParticipantController::class, 'store'])->middlewar
 Route::put('/participants/{id}', [ParticipantController::class, 'update'])->middleware('auth:sanctum');
 Route::delete('/participants/{id}', [ParticipantController::class, 'destroy'])->middleware('auth:sanctum');
 
+Route::post('/login', [AuthController::class, 'login']);
